@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-      - name: Run tests
+      - name: Run specific test file
         run: flutter test .\lib\main.dart
 
       - name: Build APK
