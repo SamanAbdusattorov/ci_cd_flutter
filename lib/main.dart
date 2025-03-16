@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+int qoshish(int a, int b) {
+  return a + b;
+}
 
 void main() {
   runApp(const MyApp());
+
+  test("Qoshish", () {
+    expect(qoshish(2, 2), 4);
+  });
 }
 
 class MyApp extends StatelessWidget {
@@ -14,11 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Scaffold(
-        body: Center(
-          child: Text('main main'),
-        ),
-      ),
+      home: Scaffold(body: Center(child: Text('main main'))),
     );
   }
 }
